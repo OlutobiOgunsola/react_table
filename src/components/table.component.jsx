@@ -66,6 +66,7 @@ const Table = ({
         // set maximum number of pages
         const maxPageCount = data?.length / rowCount;
         setMaxPages(maxPageCount);
+        setPage(1);
     }, [rowCount]);
 
     usePagination(intData, page, rowCount, setPageData);
