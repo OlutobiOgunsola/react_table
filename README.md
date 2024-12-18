@@ -34,6 +34,9 @@ Follow the steps below to run the program
 > [!NOTE]
 > The table component defaults to using [10, 50, 100] rows per page if the number of rows per page is not specified in the properties. Also the table will automatically generate headers when given an array of JSON objects if no `columns` prop is not passed to it.
 
+> [!IMPORTANT]
+> The table accepts a flat array of flat JSON objects containing only `string` or `number` values. Nested objects or arrays will NOT be rendered in the table and would be replaced as `N/A`
+
 Accepted Properties:
 
 -   `data` - An `array` of JSON objects that will be rendered in the table.
