@@ -1,68 +1,45 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Me-Cash Frontend Engineer Assessment
 
-## Available Scripts
+## Configurable React Table Component
 
-In the project directory, you can run:
+### Olutobi Ogunsola
 
-### `yarn start`
+This codebase contains the logic and code for the Configurable React Table Component in fulfillment of the Me-Cash Frontend Engineer Assessment
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Running the Application
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+> [!IMPORTANT]
+> You must have `NodeJS` and `npm` installed on your machine to run this program.
 
-### `yarn test`
+Follow the steps below to run the program
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+-   Clone or download the codebase.
+    -   `git clone https://github.com/OlutobiOgunsola/react_table`.
+-   Run `npm install` to download all dependencies and install packages.
+-   Run `npm start` to build and launch the package.
+-   Visit `http://localhost:3000` on your machine to view the application.
 
-### `yarn build`
+## Using the Table Component
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+> [!IMPORTANT]
+> The table component is designed to be flexible and reusable across multiple programs with slight changes in configuration
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+### How to use
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+-   Import the table component into the program
+-   Insert the table where you want it to be in the program
 
-### `yarn eject`
+### Props and Default Behavior
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+> [!NOTE]
+> The table component defaults to using [10, 50, 100] rows per page if the number of rows per page is not specified in the properties. Also the table will automatically generate headers when given an array of JSON objects if no `columns` prop is not passed to it.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Accepted Properties:
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+-   `data` - An `array` of JSON objects that will be rendered in the table.
+-   `columns` - An `array` of strings corresponding to the columns that will be rendered in the table. If provided, the table will only render the columns specified in this array and ignore all other properties contained in the JSON objects passed to it.
+-   `tableName` - A `string` containing the name of the table. It will be displayed in the top left of the table when rendered.
+-   `config` - An `object` containing the specified configuration for the table. This object contains:
+    -   `style` - An `object` containing the `width`, `height`, `margin` and `bandColor` specifications for the table
+        > [!NOTE] > `bandColor` specifies the color for the alternate rows of the table. If not specified, it defaults to `#DEE9FF` > `width` and `height` accept string values suffixed with `px` e.g. `100px`. If not specified, the table defaults to fill the width and height of its container.
+        > `margin` accepts a string value e.g. `100px 200px`. If not specified, it defaults to `0 auto`

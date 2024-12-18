@@ -1,11 +1,8 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 
 const TableHeaderCell = ({
     columnName, columnLength, sortFn
 }) => {
-    useEffect(() => {
-        console.log("column name", columnName, columnLength);
-    }, []);
     const handleSort = () => {
         return sortFn(columnName);
     };
