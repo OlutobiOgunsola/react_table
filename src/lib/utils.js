@@ -9,7 +9,7 @@ export const CompileHeadersFromData = (data) => {
 
     let headers = [];
 
-    data.forEach(data => {
+    data?.forEach(data => {
         let keyArray = Object.keys(data);
         keyArray.forEach(key => {
             if (headers.indexOf(key) < 0) {
@@ -45,7 +45,7 @@ export const filterData = (data, filterStr) => {
     }
 
     let objectsWithValue = [];
-    data.forEach(item => {
+    data?.forEach(item => {
         let values = Object.values(item).toString().toLowerCase();
         if (values.includes(filterStr)) {
             objectsWithValue.push(item);
@@ -66,9 +66,9 @@ export const paginateData = (data, page, rowsPerPage) => {
 
     let paginated = [];
     if (page === 1) {
-        paginated = data.slice(0, rowsPerPage);
+        paginated = data?.slice(0, rowsPerPage);
     } else {
-        paginated = data.slice((page - 1) * rowsPerPage, rowsPerPage * page);
+        paginated = data?.slice((page - 1) * rowsPerPage, rowsPerPage * page);
     }
 
     return paginated;

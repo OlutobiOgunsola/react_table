@@ -28,10 +28,10 @@ const Table = ({
 
     // compute the table columns on mount and set into columns list
     useEffect(() => {
-        if (columns.length > 0) {
+        if (columns?.length > 0) {
             setColumnList(columns);
         }
-        if (columns.length < 1) {
+        if (columns?.length < 1) {
             let columns = CompileHeadersFromData(data);
             setColumnList(columns);
         }
@@ -51,20 +51,20 @@ const Table = ({
             setRowCount(rowC => (+startingRowCount));
 
             // set maximum number of pages
-            const maxPageCount = data.length / rowCount;
+            const maxPageCount = data?.length / rowCount;
             setMaxPages(maxPageCount);
         } else {
             setRowCount(10);
 
             // set maximum number of pages
-            const maxPageCount = data.length / rowCount;
+            const maxPageCount = data?.length / rowCount;
             setMaxPages(maxPageCount);
         }
     }, [data, config?.rowsPerPageOptions]);
 
     useEffect(() => {
         // set maximum number of pages
-        const maxPageCount = data.length / rowCount;
+        const maxPageCount = data?.length / rowCount;
         setMaxPages(maxPageCount);
     }, [rowCount]);
 
@@ -104,7 +104,7 @@ const Table = ({
                         <thead className="h-20">
                             <tr>
                                 {
-                                    columnList?.map((column, _idx) => (<TableHeaderCell sortFn={sortTable} columnLength={columnList.length} columnName={column} key={_idx} />))
+                                    columnList?.map((column, _idx) => (<TableHeaderCell sortFn={sortTable} width={config?.style?.width || `100%`} columnLength={columnList?.length} columnName={column} key={_idx} />))
                                 }
                             </tr>
                         </thead>

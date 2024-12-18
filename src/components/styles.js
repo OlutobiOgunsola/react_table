@@ -10,6 +10,12 @@ export const TableWrapper = styled.div`
     margin: ${({ margin }) => {
         return margin ? margin : '0 auto';
     }};
+    font-family: ${({ fontFamily }) => {
+        return fontFamily ? fontFamily : 'sans-serif';
+    }};
+    font-size: ${({ fontSize }) => {
+        return fontSize ? fontSize : '14px';
+    }};
     
     min-height: 400px;
     

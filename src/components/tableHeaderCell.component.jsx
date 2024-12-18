@@ -1,14 +1,14 @@
 import React from 'react';
 
 const TableHeaderCell = ({
-    columnName, columnLength, sortFn
+    columnName, columnLength, sortFn, width
 }) => {
     const handleSort = () => {
         return sortFn(columnName);
     };
     return (
         <th className="hover:cursor-pointer" style={{
-            width: (columnName === "id") ? "30px" : `${1000 / columnLength}px`,
+            width: (columnName === "id") ? "30px" : `${width / columnLength}px`,
             minWidth: (columnName === "id") ? "30px" : '300px'
         }}
             onClick={handleSort}
