@@ -41,6 +41,6 @@ Accepted Properties:
 -   `tableName` - A `string` containing the name of the table. It will be displayed in the top left of the table when rendered.
 -   `config` - An `object` containing the specified configuration for the table. This object contains:
     -   `style` - An `object` containing the `width`, `height`, `margin` and `bandColor` specifications for the table
-        > [!NOTE]
-        > `bandColor` specifies the color for the alternate rows of the table. If not specified, it defaults to `#DEE9FF` > `width` and `height` accept string values suffixed with `px` e.g. `100px`. If not specified, the table defaults to fill the width and height of its container.
-        > `margin` accepts a string value e.g. `100px 200px`. If not specified, it defaults to `0 auto`
+        -   `bandColor` specifies the color for the alternate rows of the table. If not specified, it defaults to `#DEE9FF` > `width` and `height` accept string values suffixed with `px` e.g. `100px`. If not specified, the table defaults to fill the width and height of its container.
+        -   `margin` accepts a string value e.g. `100px 200px`. If not specified, it defaults to `0 auto`
+    -   `rowsPerPageOptions` - An `array` containing the rows per page options to be available in the table. Defaults to 10, 50, 100 rows `[10,50,100]` if not specified.
